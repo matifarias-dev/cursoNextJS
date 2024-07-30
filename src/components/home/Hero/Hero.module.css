@@ -1,0 +1,9 @@
+.Hero{
+    margin:10rem;
+}
+
+.Hero > h3{
+    font-family: 3rem;
+    color: mediumpurple;
+    text-align: center;
+}
