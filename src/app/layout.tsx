@@ -1,5 +1,6 @@
 import { Footer } from 'app/components/shared/Footer'
 import Header from 'app/components/shared/Header/Header'
+import 'app/sass/globals.sass'
 
 export default function RootLayout({
   children
