@@ -1,11 +1,11 @@
 import { Footer } from 'app/components/shared/Footer'
 import Header from 'app/components/shared/Header/Header'
 import 'app/sass/globals.sass'
-import { tRoboto } from 'next/font/google'
+import { Roboto_Flex } from 'next/font/google'
 
-const roboto = tRoboto({
-  weight: ["100", "300", "500"],
-  subsets:['latin']
+const roboto = Roboto_Flex({
+  weight: ['100', '300', '500'],
+  subsets: ['latin']
 })
 
 export default function RootLayout({
