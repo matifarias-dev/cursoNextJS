@@ -24,12 +24,8 @@ export const Description = () => {
   console.log(buttonStyles)
 
   return (
-    <section className={buttonStyles}>
-      <button
-        type='button'
-        onClick={handleClick}
-        className={styles.Description__button}
-      >
+    <section className={styles.Description}>
+      <button type='button' onClick={handleClick} className={buttonStyles}>
         <figure className={styles.Description__imageContainer}>
           <Image
             src='/images/description.jpeg'
@@ -37,6 +33,7 @@ export const Description = () => {
             fill
             placeholder='blur'
             blurDataURL={PLACEHOLDER_IMAGE}
+            sizes='(min-width: 400px) 100vw, (min-width: 300px) 50vw, 33vw'
           />
         </figure>
       </button>

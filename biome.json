@@ -9,6 +9,9 @@
       "recommended": true
     }
   },
+  "files": {
+    "ignore": ["**/*.module.sass"]
+  },
   "formatter": {
     "enabled": true,
     "indentStyle": "space"
