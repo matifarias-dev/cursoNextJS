@@ -1,16 +1,19 @@
 import Link from 'next/link'
+import styles from './Header.module.css'
 
-export default function Header() {
+export const Header = () => {
   return (
-    <nav>
-      <ul>
-        <li>
-          <Link href='/'>Home</Link>
-        </li>
-        <li>
-          <Link href='/store'>Store</Link>
-        </li>
-      </ul>
-    </nav>
+    <header>
+      <nav>
+        <ul className={styles.Header__list}>
+          <li>
+            <Link href='/'>Home</Link>
+          </li>
+          <li>
+            <Link href='/store'>Store</Link>
+          </li>
+        </ul>
+      </nav>
+    </header>
   )
 }
