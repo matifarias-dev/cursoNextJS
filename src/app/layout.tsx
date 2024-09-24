@@ -1,7 +1,7 @@
 import { Description } from 'app/components/home/Description'
 import { Hero } from 'app/components/home/Hero'
 import { Footer } from 'app/components/shared/Footer'
-import Header from 'app/components/shared/Header/Header'
+import { Header } from 'app/components/shared/Header'
 import 'app/sass/globals.sass'
 import { Roboto_Flex } from 'next/font/google'
 
