@@ -1,5 +1,3 @@
-import { Description } from 'app/components/home/Description'
-import { Hero } from 'app/components/home/Hero'
 import { Footer } from 'app/components/shared/Footer'
 import { Header } from 'app/components/shared/Header'
 import 'app/sass/globals.sass'
@@ -19,8 +17,6 @@ export default function RootLayout({
     <html lang='en'>
       <body className={roboto.className}>
         <Header />
-        <Hero />
-        <Description />
         {children}
         <Footer />
       </body>
