@@ -1,5 +1,6 @@
 'use client'
 
+import styles from 'app/sass/global-error.module.sass'
 import Image from 'next/image'
 import { useEffect } from 'react'
 
@@ -26,22 +27,11 @@ export default function error({ error, reset }: ErrorProps) {
         <Image
           src='https://img.icons8.com/?size=100&id=44000&format=png&color=000000'
           alt='error icon'
-          width={50}
-          height={50}
+          width={100}
+          height={100}
         />
-        <p>Ha ocurrido un error</p>
-        <button
-          type='button'
-          onClick={reset}
-          style={{
-            padding: '0.6rem',
-            borderRadius: '1.5rem',
-            border: '0.1px solid black',
-            color: '#fff',
-            cursor: 'pointer',
-            backgroundImage: 'linear-gradient(270deg, #4f56ff, #ff4980)'
-          }}
-        >
+        <h2>Ha ocurrido un error</h2>
+        <button type='button' onClick={reset} className={styles.Error__button}>
           Intentar de nuevo
         </button>
       </div>

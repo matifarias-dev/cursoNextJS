@@ -14,6 +14,15 @@ export const Header = () => {
           <li>
             <Link href='/store'>Store</Link>
           </li>
+          <li>
+            <Link href='/home-error'>Home error</Link>
+          </li>
+          <li>
+            <Link href='/error-example'>Error example</Link>
+          </li>
+          <li>
+            <Link href='/not-found'>404 example</Link>
+          </li>
         </ul>
       </nav>
     </header>

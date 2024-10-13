@@ -13,15 +13,16 @@ const getProducts = async (): Promise<Product[]> => {
       }
     )
     const { products } = await response.json()
-    // throw new Error()
-    return products
+    console.log(products)
+    throw new Error()
+    // return products
   } catch (err) {
     console.error(err)
     throw new Error('Error trying to fetch products')
   }
 }
 
-export const MainProducts = async () => {
+export const MainProductsError = async () => {
   const products = await getProducts()
   console.log(products)
   return (
