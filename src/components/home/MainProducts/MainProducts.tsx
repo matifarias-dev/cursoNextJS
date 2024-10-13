@@ -3,16 +3,22 @@ import styles from './MainProducts.module.sass'
 import type { Product } from './interface'
 
 const getProducts = async (): Promise<Product[]> => {
-  const response = await fetch(
-    `${process.env.SHOPIFY_HOSTNAME}/admin/api/2023-10/products.json`,
-    {
-      headers: {
-        'X-Shopify-Access-Token': process.env.SHOPIFY_API_KEY || ''
+  try {
+    const response = await fetch(
+      `${process.env.SHOPIFY_HOSTNAME}/admin/api/2023-10/products.json`,
+      {
+        headers: {
+          'X-Shopify-Access-Token': process.env.SHOPIFY_API_KEY || ''
+        }
       }
-    }
-  )
-  const { products } = await response.json()
-  return products
+    )
+    const { products } = await response.json()
+    throw new Error()
+    // return products
+  } catch (err) {
+    console.error(err)
+    throw new Error('Error trying to fetch products')
+  }
 }
 
 export const MainProducts = async () => {

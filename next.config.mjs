@@ -14,6 +14,10 @@ const nextConfig = {
       {
         hostname: 'cdn.shopify.com',
         protocol: 'https'
+      },
+      {
+        hostname: 'img.icons8.com',
+        protocol: 'https'
       }
     ]
   }
