@@ -12,6 +12,9 @@ export const Header = () => {
             </Link>
           </li>
           <li>
+            <Link href='/template'>Template</Link>
+          </li>
+          <li>
             <Link href='/store'>Store</Link>
           </li>
           <li>
