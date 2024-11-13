@@ -1,6 +1,5 @@
-import { env } from "app/config/env"
-import { Product } from "app/components/home/MainProducts/interface"
-
+import type { Product } from 'app/components/home/MainProducts/interface'
+import { env } from 'app/config/env'
 
 export const getProducts = async (): Promise<Product[]> => {
   try {
