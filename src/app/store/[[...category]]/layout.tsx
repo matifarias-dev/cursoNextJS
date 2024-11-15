@@ -1,13 +1,21 @@
+import Link from 'next/link'
+import { getCollections } from '../../../services/shopify/collections'
 
-export default function CategoryLayout({
-  children,
+export default async function CategoryLayout({
+  children
 }: Readonly<{
-  children: React.ReactNode;
-}>){
+  children: React.ReactNode
+}>) {
+  const categories = await getCollections()
+
   return (
-  <>
-  <h3>Layout de categoria</h3>
-  {children}
-  </>
-)
+    <>
+      {categories.map(category => (
+        <Link key={category.id} href={`/store/${category.handle}`}>
+          {category.title}
+        </Link>
+      ))}
+      {children}
+    </>
+  )
 }
